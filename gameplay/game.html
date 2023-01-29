@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./game.css">
+</head>
+<body>
+   <div id="scoreboard"><span id="player1score">0</span> - <span id="player2score">0</span></div>
+
+    <div id="container">
+     <div id="player-one"> 
+        <span>You</span>
+        <div>
+            <img class="img" id="rock1" src="../assets/rock-hand.png">
+            <img class="img" id="paper1" src="../assets/paper-hand.png">
+            <img class="img" id="scissors1" src="../assets/scissors-hand.png">
+        </div>
+
+        <div id="actionbuttons">
+            <img id="rockb" src="../assets/rock-logo.png" height="90px">
+            <img id="paperb" src="../assets/paper-logo.png" height="90px">
+            <img id="scissorsb" src="../assets/scissors-logo.png" height="90px">
+        </div>
+     </div> 
+        
+     <div id="versus"><img src="../assets/vs.png" height="560px"></div>
+
+     <div id="player-two">
+        <span>PC</span>
+      <div>
+          <img class="img" id="rock2" src="../assets/rock-hand.png">
+          <img class="img" id="paper2" src="../assets/paper-hand.png">
+          <img class="img" id="scissors2" src="../assets/scissors-hand.png">
+      </div>
+     </div>
+    </div>
+
+      <div id="playgame"><img src="../assets/play-button.png" height="45px"><span id="buttontext">Play Again</span></div>
+      <script src="./game.js"></script>
+</body>
+</html>
