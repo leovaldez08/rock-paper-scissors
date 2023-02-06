@@ -42,6 +42,7 @@ function autoPlay() {
     default:
       break;
   }
+  gameOver();
 }
 
 rockButton.onclick = () => {
@@ -58,6 +59,7 @@ rockButton.onclick = () => {
 
   playerOneScore.innerHTML = player1score;
   playerTwoScore.innerHTML = player2score;
+  gameOver();
 };
 
 scissorsButton.onclick = () => {
@@ -74,6 +76,7 @@ scissorsButton.onclick = () => {
 
   playerOneScore.innerHTML = player1score;
   playerTwoScore.innerHTML = player2score;
+  gameOver();
 };
 
 paperButton.onclick = () => {
@@ -90,8 +93,27 @@ paperButton.onclick = () => {
 
   playerOneScore.innerHTML = player1score;
   playerTwoScore.innerHTML = player2score;
+  gameOver();
+};
+
+function gameOver() {
+  if (player1score == 10) {
+  alert("You won the Game!");
+  // location.reload();
+  gameOverReload();
+  } else if (player2score == 10) {
+    alert("You lost the Game!");
+  // location.reload();
+  gameOverReload();
+  }
 };
 
 resetButton.onclick = () => {
   location.reload();
 };
+
+function gameOverReload() {
+  setTimeout(() => {
+  location.reload();
+  }, 1500)
+}
